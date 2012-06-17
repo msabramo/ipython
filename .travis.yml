@@ -1,0 +1,14 @@
+# http://travis-ci.org/#!/facebook/tornado
+language: python
+python:
+    - 2.5
+    - 2.6
+    - 2.7
+    - pypy
+    - 3.2
+before_install:
+    - pip install -q --use-mirrors pyzmq-static numpy
+install:
+    - python setup.py install -q
+script:
+    - iptest
